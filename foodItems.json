@@ -1,0 +1,110 @@
+[
+  {
+    "foodName": "Mutton Biryani",
+    "foodImage": "https://www.cookwithnabeela.com/wp-content/uploads/2023/03/MuttonBiryani.webp",
+    "foodCategory": "Biryani",
+    "quantity": "10",
+    "count": 15,
+    "price": 300,
+    "userName": "Tanvir Hasan",
+    "userEmail": "tanvir@gmail.com",
+    "origin": "India",
+    "description": "Experience the taste of the sea with our rich and creamy Lobster Bisque. This French classic boasts the delightful flavors of tender lobster meat, a fragrant blend of herbs and spices, and a velvety smooth base made with heavy cream. Each spoonful is a luxurious journey into the world of fine seafood dining, offering a symphony of textures and a captivating dance of flavors."
+  },
+  {
+    "foodName": "Chicken Biryani",
+    "foodImage": "https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg",
+    "foodCategory": "Biryani",
+    "quantity": "3",
+    "count": 5,
+    "price": 200,
+    "userName": "Tanvir Hasan",
+    "userEmail": "tanvir@gmail.com",
+    "origin": "India",
+    "description": "Delight in the timeless flavors of Italy with our Veal Scallopini. This dish features thin, tender slices of veal sautéed to perfection in a delicate white wine and lemon sauce. Accompanied by a side of perfectly al dente pasta or a medley of seasonal vegetables, every bite is a refined taste of Italian culinary tradition, characterized by its simplicity, elegance, and depth of flavor."
+  },
+  {
+    "foodName": "Kacchi Biryani",
+    "foodImage": "https://khalilsfood.com/wp-content/uploads/2020/11/Kacchi-Biryani.jpg",
+    "foodCategory": "Biryani",
+    "quantity": "20",
+    "count": 18,
+    "price": 13.99,
+    "userName": "Tanvir Hasan",
+    "userEmail": "tanvir@gmail.com",
+    "origin": "Pakistan",
+    "description": "Savor the bold and savory flavors of Mongolia with our Mongolian Beef. This Asian delight features tender strips of beef, stir-fried to perfection with a symphony of bell peppers, scallions, and ginger in a tantalizing soy-based sauce. Each bite offers a tantalizing balance of sweet and savory notes, capturing the essence of Mongolian cuisine's rich and hearty character."
+  },
+  {
+    "foodName": "Classic Smashed Cheeseburger",
+    "foodImage": "https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/1:1/w_2560%2Cc_limit/Smashburger-recipe-120219.jpg",
+    "foodCategory": "Burger",
+    "quantity": "8",
+    "count": 7,
+    "price": 400,
+    "userName": "Tanvir Hasan",
+    "userEmail": "tanvir@gmail.com",
+    "origin": "United States",
+    "description": "Dive into the comforting flavors of Italy with our Chicken Parmesan. Our chefs lovingly prepare this dish by coating tender chicken cutlets in breadcrumbs, frying them to a golden crisp, and smothering them in marinara sauce and a generous layer of melted mozzarella cheese. Served with a side of perfectly cooked pasta, every forkful is a delicious journey into the heart of Italian cuisine."
+  },
+  {
+    "foodName": "Chicken Burger",
+    "foodImage": "https://www.ontariopork.on.ca/Portals/11/EasyDNNnews/1771/Easy-Smash-Burger-with-Best-Burger-Sauce.jpg",
+    "foodCategory": "Burger",
+    "quantity": "12",
+    "count": 14,
+    "price": 500,
+    "userName": "Emon Hasan",
+    "userEmail": "emon@gmail.com",
+    "origin": "United States",
+    "description": "End your meal on a sweet note with our Chocolate Fondue. This Swiss delight features a pot of rich, velvety chocolate, perfect for dipping a variety of delectable treats, including fresh strawberries, marshmallows, and chunks of pound cake. As you dip and savor, you'll experience the delightful contrast of warm, gooey chocolate against the fresh, sweet fruits, creating a memorable and indulgent dessert experience."
+  },
+  {
+    "foodName": "Shrimp Scampi",
+    "foodImage": "https://www.foodandwine.com/thmb/Wd4lBRZz3X_8qBr69UOu2m7I2iw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg",
+    "foodCategory": "Pizza",
+    "quantity": "5",
+    "count": 7,
+    "price": 700,
+    "userName": "Emon Hasan",
+    "userEmail": "emon@gmail.com",
+    "origin": "Italy",
+    "description": "Satisfy your seafood cravings with our Shrimp Scampi, a delightful Italian creation. Plump shrimp are sautéed in a fragrant blend of garlic, white wine, and lemon, resulting in a luscious and tangy sauce. Served over a bed of perfectly cooked linguine, this dish is a marriage of seafood elegance and Italian zest."
+  },
+  {
+    "foodName": "Neapolitan Pizza",
+    "foodImage": "https://www.ontariopork.on.ca/Portals/11/EasyDNNnews/1771/Easy-Smash-Burger-with-Best-Burger-Sauce.jpg",
+    "foodCategory": "Pizza",
+    "quantity": "10",
+    "count": 10,
+    "price": 800,
+    "userName": "Emon Hasan",
+    "userEmail": "emon@gmail.com",
+    "origin": "Italy",
+    "description": "Indulge in the epitome of British culinary tradition with our Beef Wellington. This masterpiece features a tender beef fillet, seared to perfection, and then enveloped in a layer of savory mushroom duxelles and prosciutto. All of this is encased in golden, flaky puff pastry, creating a dish of unparalleled richness and taste that pays homage to the grandeur of British cuisine."
+  },
+  {
+    "foodName": "Fried Ice Cream Dessert Bars",
+    "foodImage": "https://www.tasteofhome.com/wp-content/uploads/2019/05/Fried-Ice-Cream-Dessert-Bars-_EXPS_SDJJ19_232652_B02_06_1b_rms-2.jpg",
+    "foodCategory": "Dessert",
+    "quantity": "20",
+    "count": 25,
+    "price": 200,
+    "userName": "Robin Hasan",
+    "userEmail": "robin@gmail.com",
+    "origin": "Japanese",
+    "description": "Journey to Japan with our Miso Ramen, a beloved and soul-warming dish. Our ramen features chewy noodles in a hearty miso-based broth, topped with tender slices of pork, soft-boiled eggs, scallions, and nori. With each slurp of the noodles and sip of the broth, you'll experience the heart and soul of Japanese comfort food."
+  },
+  {
+    "foodName": "Mini Cheesecake",
+    "foodImage": "https://diycandy.com/wp-content/uploads/2020/09/Small-dessert-mini-cheesecake-recipe-720x720.jpg",
+    "foodCategory": "Dessert",
+    "quantity": "5",
+    "count": 4,
+    "price": 100,
+ "userName": "Robin Hasan",
+    "userEmail": "robin@gmail.com",
+    "origin": "Various",
+    "description": "Journey to Japan with our Miso Ramen, a beloved and soul-warming dish. Our ramen features chewy noodles in a hearty miso-based broth, topped with tender slices of pork, soft-boiled eggs, scallions, and nori. With each slurp of the noodles and sip of the broth, you'll experience the heart and soul of Japanese comfort food."
+  }
+]
