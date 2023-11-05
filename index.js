@@ -1,7 +1,11 @@
 const express = require("express");
+require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 5000;
 const { MongoClient, ServerApiVersion } = require("mongodb");
+
+// middleware
+app.use(express.json());
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.8snrbzq.mongodb.net/?retryWrites=true&w=majority`;
 
@@ -20,12 +24,34 @@ async function run() {
     await client.connect();
 
     // database collections
-    const productsCollection = client.db("h4food").collection("foodItems");
+    const allFoodsCollection = client.db("h4food").collection("foodItems");
 
     // all products api
-    app.get("/foodItems", async (req, res) => {
-      const result = await productsCollection.find().toArray();
+    // get all products data
+    app.get("/api/v1/foodItems", async (req, res) => {
+      const result = await allFoodsCollection.find().toArray();
       res.send(result);
+    });
+    // get top selling 6 food items api
+    app.get("/api/v1/topSelling", async (req, res) => {
+      const query = {};
+      const options = {
+        sort: { count: -1 },
+      };
+      const result = await allFoodsCollection
+        .find(query, options)
+        .limit(6)
+        .toArray();
+      res.send(result);
+    });
+    
+
+
+    // add food item api
+    app.post("/api/v1/foodItems", async (req, res) => {
+      const newFoodItem = req.body;
+      console.log(newFoodItem);
+      res.send();
     });
 
     await client.db("admin").command({ ping: 1 });
