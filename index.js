@@ -61,6 +61,12 @@ async function run() {
       res.send();
     });
 
+    // get total food items count
+    app.get("/api/v1/foodsCount", async (req, res) => {
+      const count = await allFoodsCollection.estimatedDocumentCount();
+      res.send({ count });
+    });
+
     await client.db("admin").command({ ping: 1 });
 
     // Send a ping to confirm a successful connection
