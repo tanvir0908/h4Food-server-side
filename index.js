@@ -100,6 +100,13 @@ async function run() {
     });
 
     // users api
+    // get added product data by users email
+    app.get("/api/v1/getFoodByEmail", async (req, res) => {
+      const email = req.query.email;
+      const query = { userEmail: email };
+      const result = await allFoodsCollection.find(query).toArray();
+      res.send(result);
+    });
     // store users information in database
     app.post("/api/v1/createUser", async (req, res) => {
       const newUser = req.body;
