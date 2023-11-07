@@ -73,6 +73,13 @@ async function run() {
       const count = await allFoodsCollection.estimatedDocumentCount();
       res.send({ count });
     });
+    // add new food
+    app.post("/api/v1/addFood", async (req, res) => {
+      const newFood = req.body;
+      const result = await allFoodsCollection.insertOne(newFood);
+      res.send(result);
+    });
+
     //update food details api
     app.put("/api/v1/updateFoodDetails", async (req, res) => {
       const id = req.body._id;
