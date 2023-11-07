@@ -27,9 +27,12 @@ async function run() {
 
     // database collections
     const allFoodsCollection = client.db("h4food").collection("foodItems");
+    const orderedFoodsCollection = client
+      .db("h4food")
+      .collection("orderedFoods");
 
     // all products api
-    // get all products data
+    // get all food items data
     app.get("/api/v1/foodItems", async (req, res) => {
       const result = await allFoodsCollection.find().toArray();
       res.send(result);
@@ -68,6 +71,31 @@ async function run() {
     app.get("/api/v1/foodsCount", async (req, res) => {
       const count = await allFoodsCollection.estimatedDocumentCount();
       res.send({ count });
+    });
+    //reduce quantity after successful order
+    app.patch("/api/v1/reduceFoodsCount", async (req, res) => {
+      const id = req.body._id;
+      const orderQuantity = Number(req.body.orderQuantity);
+      const newQuantity = req.body.quantity - orderQuantity;
+      const newCount = req.body.count + orderQuantity;
+
+      const filter = { _id: new ObjectId(id) };
+      const updatedDoc = {
+        $set: {
+          quantity: newQuantity,
+          count: newCount,
+        },
+      };
+      const result = await allFoodsCollection.updateOne(filter, updatedDoc);
+      res.send(result);
+    });
+
+    // order api
+    // post order details into database
+    app.post("/api/v1/orderFood", async (req, res) => {
+      const newOrder = req.body;
+      const result = await orderedFoodsCollection.insertOne(newOrder);
+      res.send(result);
     });
 
     await client.db("admin").command({ ping: 1 });
