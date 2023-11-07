@@ -27,6 +27,7 @@ async function run() {
 
     // database collections
     const allFoodsCollection = client.db("h4food").collection("foodItems");
+    const usersCollection = client.db("h4food").collection("users");
     const orderedFoodsCollection = client
       .db("h4food")
       .collection("orderedFoods");
@@ -95,6 +96,14 @@ async function run() {
     app.post("/api/v1/orderFood", async (req, res) => {
       const newOrder = req.body;
       const result = await orderedFoodsCollection.insertOne(newOrder);
+      res.send(result);
+    });
+
+    // users api
+    // store users information in database
+    app.post("/api/v1/createUser", async (req, res) => {
+      const newUser = req.body;
+      const result = await usersCollection.insertOne(newUser);
       res.send(result);
     });
 
