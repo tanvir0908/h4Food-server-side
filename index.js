@@ -138,10 +138,24 @@ async function run() {
       const result = await allFoodsCollection.find(query).toArray();
       res.send(result);
     });
+    // get users ordered items by email
+    app.get("/api/v1/getOrdersByEmail", async (req, res) => {
+      const email = req.query.email;
+      const query = { orderUserEmail: email };
+      const result = await orderedFoodsCollection.find(query).toArray();
+      res.send(result);
+    });
     // store users information in database
     app.post("/api/v1/createUser", async (req, res) => {
       const newUser = req.body;
       const result = await usersCollection.insertOne(newUser);
+      res.send(result);
+    });
+    // delete ordered food
+    app.delete("/api/v1/deleteFood", async (req, res) => {
+      const id = req.query.id;
+      const query = { _id: new ObjectId(id) };
+      const result = await orderedFoodsCollection.deleteOne(query);
       res.send(result);
     });
 
