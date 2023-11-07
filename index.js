@@ -73,6 +73,30 @@ async function run() {
       const count = await allFoodsCollection.estimatedDocumentCount();
       res.send({ count });
     });
+    //update food details api
+    app.put("/api/v1/updateFoodDetails", async (req, res) => {
+      const id = req.body._id;
+      const filter = { _id: new ObjectId(id) };
+
+      const updatedFood = req.body;
+      const food = {
+        $set: {
+          foodName: updatedFood.newFoodName,
+          foodImage: updatedFood.newFoodImage,
+          foodCategory: updatedFood.newFoodCategory,
+          quantity: updatedFood.newQuantity,
+          count: updatedFood.count,
+          price: updatedFood.newPrice,
+          userName: updatedFood.userName,
+          userEmail: updatedFood.userEmail,
+          origin: updatedFood.newOrigin,
+          description: updatedFood.newDescription,
+        },
+      };
+      const result = await allFoodsCollection.updateOne(filter, food);
+      res.send(result);
+    });
+
     //reduce quantity after successful order
     app.patch("/api/v1/reduceFoodsCount", async (req, res) => {
       const id = req.body._id;
