@@ -34,6 +34,17 @@ async function run() {
       const result = await allFoodsCollection.find().toArray();
       res.send(result);
     });
+    // get data by pagination
+    app.get("/api/v1/pageItems", async (req, res) => {
+      // console.log(req.query.page);
+      const page = Number(req.query.page);
+      const result = await allFoodsCollection
+        .find()
+        .skip(page * 9)
+        .limit(9)
+        .toArray();
+      res.send(result);
+    });
     // get top selling 6 food items api
     app.get("/api/v1/topSelling", async (req, res) => {
       const query = {};
@@ -53,14 +64,6 @@ async function run() {
       const result = await allFoodsCollection.findOne(query);
       res.send(result);
     });
-
-    // add food item api
-    app.post("/api/v1/foodItems", async (req, res) => {
-      const newFoodItem = req.body;
-      console.log(newFoodItem);
-      res.send();
-    });
-
     // get total food items count
     app.get("/api/v1/foodsCount", async (req, res) => {
       const count = await allFoodsCollection.estimatedDocumentCount();
