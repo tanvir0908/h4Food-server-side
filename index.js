@@ -23,7 +23,7 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
+    // await client.connect();
 
     // database collections
     const allFoodsCollection = client.db("h4food").collection("foodItems");
@@ -159,7 +159,7 @@ async function run() {
       res.send(result);
     });
 
-    await client.db("admin").command({ ping: 1 });
+    // await client.db("admin").command({ ping: 1 });
 
     // Send a ping to confirm a successful connection
     console.log(
@@ -173,7 +173,7 @@ async function run() {
 run().catch(console.dir);
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("h4Food server is running...");
 });
 
 app.listen(port, () => {
